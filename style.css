@@ -213,6 +213,9 @@ li { margin-bottom: .35em }
 .timeline::before { content: ""; position: absolute; left: 5px; top: 6px; bottom: 6px; width: 2px; background: var(--rule) }
 .tl { position: relative; margin-bottom: 15px }
 .tl::before { content: ""; position: absolute; left: -21px; top: .62em; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); border: 2px solid var(--paper) }
+/* 潮國那條並行線用石青色的點，跟泉漳主線區分開 */
+.tl.chao::before { background: var(--accent-2) }
+.tl.chao .y { color: var(--accent-2) }
 .tl .y { font-size: .8rem; color: var(--accent); letter-spacing: .05em; font-weight: 700 }
 .tl .t { font-size: .95rem }
 

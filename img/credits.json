@@ -361,5 +361,148 @@
         "artist":  "Unknown; scanned by 天竺鼠 (talk) 20:57, 21 August 2009 (UTC)",
         "license":  "Public domain",
         "licurl":  null
+    },
+    {
+        "id":  "zhaotuo",
+        "zh":  "趙佗",
+        "cap":  "趙佗像。南征百越的副將，趁秦亡起兵建南越王國",
+        "src":  "zhaotuo.jpg",
+        "file":  "File:Statue of Triệu Vũ Đế (Emperor Zhao Tuo), Nanyuewang Miao 2015.11.12 09-10-58.jpg",
+        "page":  "https://commons.wikimedia.org/wiki/File%3AStatue%20of%20Tri%E1%BB%87u%20V%C5%A9%20%C4%90%E1%BA%BF%20(Emperor%20Zhao%20Tuo)%2C%20Nanyuewang%20Miao%202015.11.12%2009-10-58.jpg",
+        "artist":  "Zhangzhugang",
+        "license":  "CC BY-SA 4.0",
+        "licurl":  "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+        "id":  "nanyuetomb",
+        "zh":  "南越王墓",
+        "cap":  "廣州西漢南越王博物館。南越王國留下的實物",
+        "src":  "nanyuetomb.jpg",
+        "file":  "File:Museum of the Western Han Dynasty Mausoleum of the Nanyue King 20230505.jpg",
+        "page":  "https://commons.wikimedia.org/wiki/File%3AMuseum%20of%20the%20Western%20Han%20Dynasty%20Mausoleum%20of%20the%20Nanyue%20King%2020230505.jpg",
+        "artist":  "中少",
+        "license":  "CC BY-SA 4.0",
+        "licurl":  "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+        "id":  "hanyu",
+        "zh":  "韓愈",
+        "cap":  "韓愈，被貶潮州刺史，只待了八個月",
+        "src":  "hanyu.jpg",
+        "file":  "File:Han Yu.jpg",
+        "page":  "https://commons.wikimedia.org/wiki/File%3AHan%20Yu.jpg",
+        "artist":  "",
+        "license":  "Public domain",
+        "licurl":  null
+    },
+    {
+        "id":  "hanwengong",
+        "zh":  "韓文公祠",
+        "cap":  "潮州韓文公祠，紀念韓愈",
+        "src":  "hanwengong.jpg",
+        "file":  "File:Chaozhou Hanwengong Ci 2013.10.27 09-00-34.jpg",
+        "page":  "https://commons.wikimedia.org/wiki/File%3AChaozhou%20Hanwengong%20Ci%202013.10.27%2009-00-34.jpg",
+        "artist":  "Zhangzhugang",
+        "license":  "CC BY-SA 4.0",
+        "licurl":  "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+        "id":  "hanjiang",
+        "zh":  "韓江",
+        "cap":  "潮州韓江。本名鱷溪（惡溪），因韓愈而改名",
+        "src":  "hanjiang.jpeg",
+        "file":  "File:Chaozhou Han River.jpeg",
+        "page":  "https://commons.wikimedia.org/wiki/File%3AChaozhou%20Han%20River.jpeg",
+        "artist":  "Hongtiezhu",
+        "license":  "Public domain",
+        "licurl":  null
+    },
+    {
+        "id":  "guangjiqiao",
+        "zh":  "廣濟橋",
+        "cap":  "潮州廣濟橋，橫跨韓江",
+        "src":  "guangjiqiao.jpg",
+        "file":  "File:Chaozhou Guangji Bridge 20191211 2.jpg",
+        "page":  "https://commons.wikimedia.org/wiki/File%3AChaozhou%20Guangji%20Bridge%2020191211%202.jpg",
+        "artist":  "Akira CA",
+        "license":  "CC BY-SA 4.0",
+        "licurl":  "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+        "id":  "chaokaiyuan",
+        "zh":  "潮州開元寺",
+        "cap":  "潮州開元寺",
+        "src":  "chaokaiyuan.jpg",
+        "file":  "File:20230206 Kaiyuan Temple, Chaozhou 02.jpg",
+        "page":  "https://commons.wikimedia.org/wiki/File%3A20230206%20Kaiyuan%20Temple%2C%20Chaozhou%2002.jpg",
+        "artist":  "Windmemories",
+        "license":  "CC BY-SA 4.0",
+        "licurl":  "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+        "id":  "paifang",
+        "zh":  "潮州牌坊街",
+        "cap":  "潮州牌坊街",
+        "src":  "paifang.jpg",
+        "file":  "File:Arch street of Chaozhou1.jpg",
+        "page":  "https://commons.wikimedia.org/wiki/File%3AArch%20street%20of%20Chaozhou1.jpg",
+        "artist":  "Polar1",
+        "license":  "CC BY 3.0",
+        "licurl":  "https://creativecommons.org/licenses/by/3.0"
+    },
+    {
+        "id":  "chaoju",
+        "zh":  "潮劇",
+        "cap":  "潮劇演出。潮國專屬的劇種",
+        "src":  "chaoju.jpg",
+        "file":  "File:Teochew opera performance in George Town, Penang in 2024.jpg",
+        "page":  "https://commons.wikimedia.org/wiki/File%3ATeochew%20opera%20performance%20in%20George%20Town%2C%20Penang%20in%202024.jpg",
+        "artist":  "HundenvonPenang",
+        "license":  "CC BY-SA 4.0",
+        "licurl":  "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+        "id":  "chaocai",
+        "zh":  "潮州菜",
+        "cap":  "潮州粿。潮州菜是自成一格的菜系",
+        "src":  "chaocai.jpg",
+        "file":  "File:Assorted Teochew kueh.jpg",
+        "page":  "https://commons.wikimedia.org/wiki/File%3AAssorted%20Teochew%20kueh.jpg",
+        "artist":  "Jpatokal",
+        "license":  "CC BY-SA 4.0",
+        "licurl":  "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+        "id":  "jieyang",
+        "zh":  "揭陽",
+        "cap":  "揭陽進賢門。秦置揭陽縣，是潮國最早的建置",
+        "src":  "jieyang.jpg",
+        "file":  "File:Jieyang Gate Tower.jpg",
+        "page":  "https://commons.wikimedia.org/wiki/File%3AJieyang%20Gate%20Tower.jpg",
+        "artist":  "13yxzou",
+        "license":  "CC BY-SA 4.0",
+        "licurl":  "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+        "id":  "shantou",
+        "zh":  "汕頭小公園",
+        "cap":  "汕頭小公園一帶的騎樓街區，開埠後的商業中心",
+        "src":  "shantou.jpg",
+        "file":  "File:Xiaogongyuan.jpg",
+        "page":  "https://commons.wikimedia.org/wiki/File%3AXiaogongyuan.jpg",
+        "artist":  "Sgnpkd",
+        "license":  "CC BY-SA 4.0",
+        "licurl":  "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+        "id":  "nanao",
+        "zh":  "南澳島",
+        "cap":  "南澳島前澳灣。汕頭東鄰的島嶼",
+        "src":  "nanao.jpg",
+        "file":  "File:20230205 Qian\u0027ao Beach in Nan\u0027ao.jpg",
+        "page":  "https://commons.wikimedia.org/wiki/File%3A20230205%20Qian\u0027ao%20Beach%20in%20Nan\u0027ao.jpg",
+        "artist":  "Windmemories",
+        "license":  "CC BY-SA 4.0",
+        "licurl":  "https://creativecommons.org/licenses/by-sa/4.0"
     }
 ]

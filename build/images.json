@@ -31,5 +31,19 @@
   { "id": "qingshui",      "zh": "艋舺清水巖",       "cap": "艋舺清水巖祖師廟，頂下郊拚中被借道燒毀", "file": "File:Interior of Bangka Qingshui Temple-04.2024-02-11.jpg" },
   { "id": "chenjiongming", "zh": "陳炯明",           "cap": "陳炯明，海豐人，閩南護法區的建立者",     "file": "File:Chen Jiongming2.jpg" },
   { "id": "jiangguangnai", "zh": "蔣光鼐",           "cap": "蔣光鼐，十九路軍，誘捕處決陳國輝",       "file": "File:Jiang Guangnai.jpg" },
-  { "id": "caitingkai",    "zh": "蔡廷鍇",           "cap": "蔡廷鍇，十九路軍",                        "file": "File:Cai Tingkai.jpg" }
+  { "id": "caitingkai",    "zh": "蔡廷鍇",           "cap": "蔡廷鍇，十九路軍",                        "file": "File:Cai Tingkai.jpg" },
+
+  { "id": "zhaotuo",       "zh": "趙佗",             "cap": "趙佗像。南征百越的副將，趁秦亡起兵建南越王國", "file": "File:Statue of Triệu Vũ Đế (Emperor Zhao Tuo), Nanyuewang Miao 2015.11.12 09-10-58.jpg" },
+  { "id": "nanyuetomb",    "zh": "南越王墓",         "cap": "廣州西漢南越王博物館。南越王國留下的實物",   "file": "File:Museum of the Western Han Dynasty Mausoleum of the Nanyue King 20230505.jpg" },
+  { "id": "hanyu",         "zh": "韓愈",             "cap": "韓愈，被貶潮州刺史，只待了八個月",         "file": "File:Han Yu.jpg" },
+  { "id": "hanwengong",    "zh": "韓文公祠",         "cap": "潮州韓文公祠，紀念韓愈",                   "file": "File:Chaozhou Hanwengong Ci 2013.10.27 09-00-34.jpg" },
+  { "id": "hanjiang",      "zh": "韓江",             "cap": "潮州韓江。本名鱷溪（惡溪），因韓愈而改名", "file": "File:Chaozhou Han River.jpeg" },
+  { "id": "guangjiqiao",   "zh": "廣濟橋",           "cap": "潮州廣濟橋，橫跨韓江",                     "file": "File:Chaozhou Guangji Bridge 20191211 2.jpg" },
+  { "id": "chaokaiyuan",   "zh": "潮州開元寺",       "cap": "潮州開元寺",                              "file": "File:20230206 Kaiyuan Temple, Chaozhou 02.jpg" },
+  { "id": "paifang",       "zh": "潮州牌坊街",       "cap": "潮州牌坊街",                              "file": "File:Arch street of Chaozhou1.jpg" },
+  { "id": "chaoju",        "zh": "潮劇",             "cap": "潮劇演出。潮國專屬的劇種",                 "file": "File:Teochew opera performance in George Town, Penang in 2024.jpg" },
+  { "id": "chaocai",       "zh": "潮州菜",           "cap": "潮州粿。潮州菜是自成一格的菜系",           "file": "File:Assorted Teochew kueh.jpg" },
+  { "id": "jieyang",       "zh": "揭陽",             "cap": "揭陽進賢門。秦置揭陽縣，是潮國最早的建置", "file": "File:Jieyang Gate Tower.jpg" },
+  { "id": "shantou",       "zh": "汕頭小公園",       "cap": "汕頭小公園一帶的騎樓街區，開埠後的商業中心", "file": "File:Xiaogongyuan.jpg" },
+  { "id": "nanao",         "zh": "南澳島",           "cap": "南澳島前澳灣。汕頭東鄰的島嶼",             "file": "File:20230205 Qian'ao Beach in Nan'ao.jpg" }
 ]
