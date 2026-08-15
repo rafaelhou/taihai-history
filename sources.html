@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>圖片來源與授權 — 泉漳本無史</title>
+<meta name="description" content="本站地圖圖資與人物、場景圖像的來源、作者與授權條款。">
+<link rel="icon" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar"><div class="topbar-in">
+  <a class="brand" href="index.html">泉漳<span>本無史</span></a>
+  <nav class="navlinks">
+    <a href="index.html">序</a>
+    <a href="ch1-minyue.html">一 閩越</a>
+    <a href="ch2-nanchao.html">二 南朝</a>
+    <a href="ch3-tang.html">三 唐</a>
+    <a href="ch4-wudai.html">四 五代</a>
+    <a href="ch5-songyuan.html">五 宋元</a>
+    <a href="ch6-yisibaxi.html">六 元末</a>
+    <a href="ch7-zheng.html">七 明鄭</a>
+    <a href="ch8-duidu.html">八 對渡</a>
+    <a href="ch9-minguo.html">九 民國</a>
+    <a href="sources.html" aria-current="page">來源</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+
+  <h1>圖片來源與授權</h1>
+  <p class="lede">本站所有人物與場景圖像取自 Wikimedia Commons。CC 授權的圖依條款標示作者與授權；公有領域與 CC0 的圖一併列出，以便查證。</p>
+
+  <div class="col">
+    <h2>地圖</h2>
+    <p>底圖的海岸線是<b>真的</b>：取自 <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> 1:10m 的 <code>ne_10m_land</code> 與 <code>ne_10m_minor_islands</code>（公有領域），以 <code>build/make-map.js</code> 裁切、Douglas–Peucker 簡化後，用 Mercator 投影轉成 SVG path。</p>
+    <p>底圖<b>以外</b>的東西——各國疆域、語區範圍、進軍路線、航路、台北盆地的河道與聚落——<b>全是手繪示意</b>，只求方位大致正確，不能拿來當行政區界或航跡考據。疆域的海岸那一側之所以看起來很精確，是因為用 SVG <code>clipPath</code> 夾住了真實陸地，不是因為那條界線本身有考據。</p>
+    <div class="note warn">
+      另外要說明：頂下郊拚那張圖標的是<b>今日的地理位置</b>。1853 年的淡水河道與海岸線與今日不同，當時艋舺一帶還到處是沼澤——這也正是「大軍要經過廟宇建築成了障礙」的原因。
+    </div>
+
+    <h2>關於人物圖像</h2>
+    <p>近代人物（連橫、陳炯明、蔣光鼐、蔡廷鍇）有真實照片。古代人物則多為歷代畫像或後世塑像，<b>未必是寫實的肖像</b>，只能當作形象參考。</p>
+    <p>另有幾位查無可信圖像傳世（真諦法師、蒲壽庚、蒲師文、恭順／那兀納、張貞、陳國輝），本站以一枚印記代替，不以他人畫像充數。</p>
+  </div>
+
+  <div id="srclist"></div>
+
+  <div class="chnav">
+    <a href="index.html"><div class="k">回到</div><div class="v">← 序‧泉漳本無史</div></a>
+    <span></span>
+  </div>
+
+</main>
+
+<footer><div class="foot-in">
+  <p>Natural Earth 圖資為公有領域。人物與場景圖像著作權屬各原作者，依其授權條款使用。</p>
+  <p id="counter" hidden>累計瀏覽 <span id="view-count">—</span> 次</p>
+</div></footer>
+
+<script src="data/credits.js"></script>
+<script src="people.js"></script>
+<script src="counter.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.TH.renderSources(document.getElementById('srclist'));
+  });
+</script>
+</body>
+</html>

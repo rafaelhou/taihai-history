@@ -1,0 +1,241 @@
+/* ── 泉漳台海史 ────────────────────────────────────────────
+   配色走「舊紙／墨」。地圖是主角，內文讓路。
+   ──────────────────────────────────────────────────────── */
+
+:root {
+  --paper:      #f3ece0;
+  --paper-2:    #ece3d3;
+  --card:       #fbf7ef;
+  --ink:        #24201a;
+  --ink-2:      #554d3f;
+  --ink-3:      #857a67;
+  --rule:       #d6cab3;
+  --accent:     #8c3a2b;   /* 硃砂 */
+  --accent-2:   #2f5d62;   /* 石青 */
+  --gold:       #a8853c;
+  --sea:        #cfdde2;
+  --land:       #e6dcc2;
+  --land-edge:  #a99878;
+  --shadow:     0 1px 2px rgba(60,45,25,.10), 0 6px 18px rgba(60,45,25,.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:    #16150f;
+    --paper-2:  #1e1c14;
+    --card:     #22201a;
+    --ink:      #ece5d6;
+    --ink-2:    #bfb5a1;
+    --ink-3:    #8d8371;
+    --rule:     #3a3529;
+    --accent:   #d4705c;
+    --accent-2: #6fb0b6;
+    --gold:     #d4ac5e;
+    --sea:      #16242b;
+    --land:     #2f2a20;
+    --land-edge:#5d5340;
+    --shadow:   0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.35);
+  }
+}
+
+* { box-sizing: border-box }
+
+html { scroll-behavior: smooth }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Noto Serif TC", "Source Han Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.85;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ── 頁首 ───────────────────────────────────────────── */
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+.topbar-in {
+  max-width: 1180px; margin: 0 auto; padding: 10px 20px;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700; font-size: 1.05rem; letter-spacing: .06em;
+  color: var(--ink); text-decoration: none; white-space: nowrap;
+}
+.brand span { color: var(--accent) }
+.navlinks { display: flex; gap: 4px; flex-wrap: wrap; font-size: .82rem; margin-left: auto }
+.navlinks a {
+  color: var(--ink-2); text-decoration: none;
+  padding: 3px 9px; border-radius: 999px; border: 1px solid transparent;
+  white-space: nowrap;
+}
+.navlinks a:hover { border-color: var(--rule); background: var(--paper-2) }
+.navlinks a[aria-current="page"] { background: var(--accent); color: #fff }
+
+/* ── 版面 ───────────────────────────────────────────── */
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px 80px }
+.col  { max-width: 760px }
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.7rem); line-height: 1.3;
+  margin: 34px 0 6px; letter-spacing: .02em;
+}
+h2 {
+  font-size: clamp(1.25rem, 3.4vw, 1.6rem); margin: 52px 0 14px;
+  padding-bottom: 8px; border-bottom: 2px solid var(--rule);
+}
+h3 { font-size: 1.1rem; margin: 30px 0 8px; color: var(--accent-2) }
+p  { margin: 0 0 1.05em }
+a  { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px }
+
+.lede {
+  font-size: 1.06rem; color: var(--ink-2);
+  border-left: 3px solid var(--gold); padding-left: 16px; margin: 18px 0 30px;
+}
+.era {
+  display: inline-block; font-size: .78rem; letter-spacing: .14em;
+  color: var(--accent); border: 1px solid var(--accent);
+  border-radius: 999px; padding: 2px 12px; margin-top: 26px;
+}
+.muted { color: var(--ink-3); font-size: .86rem }
+
+/* ── 地圖 ───────────────────────────────────────────── */
+.mapblock { margin: 26px 0 34px }
+.mapbox {
+  position: relative; background: var(--sea);
+  border: 1px solid var(--rule); border-radius: 10px; overflow: hidden;
+  box-shadow: var(--shadow); touch-action: manipulation;
+}
+.mapbox svg { display: block; width: 100%; height: auto }
+/* 直式的圖在寬螢幕上會高到離譜。不用 max-height 封頂（那會左右留白浪費半個版面），
+   改由 map.js 依這張圖自己的長寬比去限制整張卡片的寬度，卡片再置中。 */
+.mapbox { margin: 0 auto }
+
+.land      { fill: var(--land); stroke: var(--land-edge); stroke-width: .8; vector-effect: non-scaling-stroke }
+.rgn       { cursor: pointer; transition: opacity .15s }
+.rgn:hover { opacity: .95 }
+.rgn.on    { stroke-width: 2.5 }
+.route     { fill: none; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke }
+.hit       { fill: transparent; cursor: pointer }
+.dot       { pointer-events: none }
+.plabel {
+  pointer-events: none; fill: var(--ink); font-weight: 600;
+  paint-order: stroke; stroke: var(--paper); stroke-width: 3.5px; stroke-linejoin: round;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+}
+.rlabel {
+  pointer-events: none; font-weight: 700; letter-spacing: .12em;
+  paint-order: stroke; stroke-width: 4px; stroke-linejoin: round;
+  font-family: "Noto Serif TC", serif;
+}
+
+.maptools {
+  display: flex; gap: 6px; flex-wrap: wrap; align-items: center;
+  padding: 9px 12px; border-top: 1px solid var(--rule); background: var(--card);
+}
+.maptools button {
+  font: inherit; font-size: .8rem; cursor: pointer;
+  background: var(--paper-2); color: var(--ink-2);
+  border: 1px solid var(--rule); border-radius: 999px; padding: 3px 12px;
+}
+.maptools button:hover { border-color: var(--accent); color: var(--accent) }
+.maptools button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff }
+
+.legend { display: flex; gap: 12px; flex-wrap: wrap; padding: 9px 12px; border-top: 1px solid var(--rule); font-size: .78rem; color: var(--ink-2) }
+.legend i { display: inline-block; width: 13px; height: 13px; border-radius: 3px; margin-right: 5px; vertical-align: -2px; border: 1px solid rgba(0,0,0,.2) }
+.legend .ln { width: 20px; height: 0; border-radius: 0; border: 0; border-top-width: 3px; border-top-style: solid; vertical-align: 4px }
+
+.mapinfo {
+  padding: 12px 14px; border-top: 1px solid var(--rule); background: var(--card);
+  font-size: .9rem; min-height: 2.8em;
+}
+.mapinfo b { color: var(--accent) }
+.mapinfo .ph { color: var(--ink-3) }
+.mapcap { font-size: .78rem; color: var(--ink-3); margin: 7px 2px 0 }
+
+/* ── 人物卡 ─────────────────────────────────────────── */
+.people { display: grid; grid-template-columns: repeat(auto-fill, minmax(178px, 1fr)); gap: 16px; margin: 24px 0 30px }
+.person {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column;
+}
+.person img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: 50% 22%; display: block; background: var(--paper-2) }
+.person .pn { font-weight: 700; padding: 9px 11px 0; font-size: .98rem }
+.person .pc { padding: 2px 11px 11px; font-size: .8rem; color: var(--ink-2); line-height: 1.6 }
+.person.wide { grid-column: 1 / -1; flex-direction: row }
+.person.wide img { width: 40%; max-width: 230px; aspect-ratio: auto }
+
+.figure { margin: 24px 0; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow) }
+.figure img { width: 100%; display: block }
+.figure figcaption { padding: 9px 13px; font-size: .82rem; color: var(--ink-2) }
+
+/* ── 小工具 ─────────────────────────────────────────── */
+.note {
+  background: var(--paper-2); border: 1px solid var(--rule); border-left: 3px solid var(--gold);
+  border-radius: 6px; padding: 13px 16px; margin: 22px 0; font-size: .92rem; color: var(--ink-2);
+}
+.note b { color: var(--ink) }
+.warn { border-left-color: var(--accent) }
+
+.quote {
+  font-size: 1.12rem; line-height: 1.9; margin: 22px 0; padding: 4px 0 4px 18px;
+  border-left: 3px solid var(--accent); color: var(--ink);
+}
+.quote small { display: block; font-size: .8rem; color: var(--ink-3); margin-top: 6px }
+
+table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: .9rem }
+.tablewrap { overflow-x: auto; -webkit-overflow-scrolling: touch }
+th, td { text-align: left; padding: 8px 11px; border-bottom: 1px solid var(--rule); vertical-align: top }
+th { background: var(--paper-2); font-size: .84rem; letter-spacing: .04em; white-space: nowrap }
+
+ul, ol { padding-left: 1.35em; margin: 0 0 1.05em }
+li { margin-bottom: .35em }
+
+/* ── 首頁時間軸 ─────────────────────────────────────── */
+.chapters { display: grid; grid-template-columns: repeat(auto-fill, minmax(268px, 1fr)); gap: 16px; margin: 26px 0 }
+.chcard {
+  display: block; text-decoration: none; color: inherit; background: var(--card);
+  border: 1px solid var(--rule); border-radius: 11px; padding: 16px 18px;
+  box-shadow: var(--shadow); transition: transform .15s, border-color .15s;
+}
+.chcard:hover { transform: translateY(-2px); border-color: var(--accent) }
+.chcard .no { font-size: .74rem; letter-spacing: .18em; color: var(--gold) }
+.chcard .ti { font-size: 1.12rem; font-weight: 700; margin: 3px 0 5px }
+.chcard .dt { font-size: .78rem; color: var(--accent); margin-bottom: 7px }
+.chcard .ds { font-size: .86rem; color: var(--ink-2); line-height: 1.65 }
+
+.timeline { position: relative; margin: 30px 0 10px; padding-left: 22px }
+.timeline::before { content: ""; position: absolute; left: 5px; top: 6px; bottom: 6px; width: 2px; background: var(--rule) }
+.tl { position: relative; margin-bottom: 15px }
+.tl::before { content: ""; position: absolute; left: -21px; top: .62em; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); border: 2px solid var(--paper) }
+.tl .y { font-size: .8rem; color: var(--accent); letter-spacing: .05em; font-weight: 700 }
+.tl .t { font-size: .95rem }
+
+/* ── 章節導航 ───────────────────────────────────────── */
+.chnav { display: flex; gap: 12px; justify-content: space-between; margin: 56px 0 0; border-top: 1px solid var(--rule); padding-top: 22px; flex-wrap: wrap }
+.chnav a { flex: 1 1 220px; text-decoration: none; color: inherit; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 15px }
+.chnav a:hover { border-color: var(--accent) }
+.chnav .k { font-size: .74rem; color: var(--ink-3); letter-spacing: .1em }
+.chnav .v { font-weight: 700 }
+.chnav .next { text-align: right }
+
+footer {
+  border-top: 1px solid var(--rule); margin-top: 60px; padding: 26px 20px 50px;
+  font-size: .82rem; color: var(--ink-3);
+}
+.foot-in { max-width: 1180px; margin: 0 auto }
+footer a { color: var(--ink-2) }
+#counter { margin-top: 10px }
+
+@media (max-width: 640px) {
+  body { font-size: 16px }
+  .wrap { padding: 0 15px 60px }
+  .person.wide { flex-direction: column }
+  .person.wide img { width: 100%; max-width: none }
+  .navlinks { font-size: .78rem; margin-left: 0; width: 100%; overflow-x: auto; padding-bottom: 2px }
+}

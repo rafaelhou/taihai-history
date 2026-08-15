@@ -1,0 +1,6 @@
+# Natural Earth 原始圖資（約 11 MB，可用 build/get-geodata.ps1 重抓）
+build/*.geojson
+
+.wrangler/
+.DS_Store
+Thumbs.db
